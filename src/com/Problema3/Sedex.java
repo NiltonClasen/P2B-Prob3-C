@@ -5,6 +5,8 @@
  */
 package com.Problema3;
 
+import com.Exceptions.TipoEntregaInvalido;
+
 /**
  *
  * @author casa
@@ -13,7 +15,33 @@ public class Sedex implements Entrega{
 
     @Override
     public double getValorEntrega(Pedido p) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        double peso = getPesoTotal(p);
+        
+        if(peso == 1){
+            
+        }
+        
+        return 0;
+        
+    }
+    
+    private double getPesoTotal(Pedido p){
+   
+        double peso = 0;
+        
+        if(p == null){
+            throw new TipoEntregaInvalido("Isso não é valido!");
+        
+        }
+            
+        for (ItemPedido item : p.getItens()) {
+            
+            peso += item.getProduto().getPeso() * item.getQuantidade();
+
+        }
+        
+        return peso/2;
     }
     
 }
