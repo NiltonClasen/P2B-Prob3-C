@@ -15,6 +15,8 @@ public class Pedido {
     private Entrega entrega;
 
     public Pedido() {
+        
+        itens = new ArrayList<ItemPedido>();
     }
 
     public int getNumero() {
