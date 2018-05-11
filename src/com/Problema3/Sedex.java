@@ -18,11 +18,25 @@ public class Sedex implements Entrega{
         
         double peso = getPesoTotal(p);
         
-        if(peso == 1){
-            
+        if(peso <= 500){
+            return 12.50;
+        } else if (peso > 500 && peso <= 750) {
+            return 20;
+        } else if (peso > 751 && peso <= 1200) {
+            return 30;
+        } else if (peso > 1201 && peso <= 2000) {
+            return 45;
+        } else if (peso > 2000) {
+            peso -= 2000;
+            double adicional = 0;
+            while (peso > 0) {                
+                adicional += 1.50;
+                peso -= 100;
+            }
+            return 45+adicional;
+        } else {
+            return 0;
         }
-        
-        return 0;
         
     }
     
