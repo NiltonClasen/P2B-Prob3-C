@@ -2,12 +2,15 @@ package com.Problema3;
 
 
 public class EncomendaPAC implements Entrega {
-
-    
     
     @Override
     public double getValorEntrega(Pedido p) {
+          
+        double peso = getPesoTotal(p);
         
+        if(peso == 1){
+            
+        }
         
     }
     
@@ -16,7 +19,7 @@ public class EncomendaPAC implements Entrega {
         double peso = 0;
         
         if(p == null){
-            throw new IllegalArgumentException("N");
+            throw new IllegalArgumentException("Nenhum pedido");
         
         }
             
@@ -25,7 +28,7 @@ public class EncomendaPAC implements Entrega {
             peso += item.getProduto().getPeso() * item.getQuantidade();
 
         }
-        return peso;
+        return peso/2;
     }
     
    
