@@ -12,6 +12,7 @@ public class Pedido {
     private Date data;
     private String endereco;
     private ArrayList<ItemPedido> itens;
+    private Entrega entrega;
 
     public Pedido() {
     }
@@ -60,4 +61,19 @@ public class Pedido {
         return valorTotal;
     }
 
+    public ArrayList<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setEntrega(Entrega entrega) {
+        this.entrega = entrega;
+    }
+
+    public double getValorEntrega() {
+        return entrega.getValorEntrega(this);
+    }
+
+    public double getValorTotal() {
+        return this.getValorPedido() + getValorEntrega();
+    }
 }
