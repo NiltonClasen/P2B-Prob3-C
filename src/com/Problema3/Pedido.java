@@ -60,4 +60,8 @@ public class Pedido {
         return valorTotal;
     }
 
+    public ArrayList<ItemPedido> getItens() {
+        return itens;
+    }
+    
 }
