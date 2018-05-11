@@ -5,12 +5,28 @@
  */
 package com.Principal;
 
+import com.Problema3.Pedido;
+import com.Problema3.Produto;
+
 /**
  *
  * @author daniel
  */
 public class Principal {
     public static void main(String[] args) {
-        System.out.println("com.Principal.Principal.main()");
+        Pedido p = new Pedido();
+        p.setNumero(0);
+        p.setNomeCliente("fulano de tal");
+        p.setEndereco("alguma coisa");
+//        p.setData("02/02/2018");
+
+        Produto pt = new Produto("produto legal", 200, 2);
+        pt.setDescricao("aa");
+        pt.setPeso(22);
+        pt.setValor(33);
+        
+        p.incluirItem(pt, 2);
+        
+        System.out.println(p.getValorPedido());
     }
 }
