@@ -1,0 +1,5 @@
+Singleton
+É utilizado nas classes de modalidade de entrega. 
+
+Stategy
+Desenvolvemos uma classe abstract que coordena métodos para as demais classes, criando uma "estrategia" (StrategyPedidos).
