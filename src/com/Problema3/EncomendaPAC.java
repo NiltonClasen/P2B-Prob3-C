@@ -2,7 +2,7 @@ package com.Problema3;
 
 import com.Exceptions.TipoEntregaInvalido;
 
-public class EncomendaPAC implements Entrega {
+public class EncomendaPAC extends StrategyPedidos {
     private static EncomendaPAC e;
 
     private EncomendaPAC() {
@@ -32,23 +32,6 @@ public class EncomendaPAC implements Entrega {
             throw new TipoEntregaInvalido();
         }
 
-    }
-
-    private double getPesoTotal(Pedido p) {
-
-        double peso = 0;
-
-        if (p == null) {
-            throw new IllegalArgumentException("Nenhum pedido");
-
-        }
-
-        for (ItemPedido item : p.getItens()) {
-
-            peso += item.getProduto().getPeso() * item.getQuantidade();
-
-        }
-        return peso / 1000;
     }
 
 }

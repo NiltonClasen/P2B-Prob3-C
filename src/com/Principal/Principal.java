@@ -9,6 +9,7 @@ import com.Problema3.EncomendaPAC;
 import com.Problema3.Pedido;
 import com.Problema3.Produto;
 import com.Problema3.RetiradaLocal;
+import com.Problema3.StrategyPedidos;
 
 /**
  *
@@ -23,10 +24,7 @@ public class Principal {
         p.setEntrega(EncomendaPAC.getInstance());
 //        p.setData("02/02/2018");
 
-        Produto pt = new Produto("produto legal", 200, 2);
-        pt.setDescricao("aa");
-        pt.setPeso(22);
-        pt.setValor(33);
+        Produto pt = new Produto("produto legal", 1, 1);
         
         p.incluirItem(pt, 2);
         

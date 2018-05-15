@@ -11,7 +11,7 @@ import com.Exceptions.TipoEntregaInvalido;
  *
  * @author casa
  */
-public class Sedex implements Entrega{
+public class Sedex extends StrategyPedidos{
     private static Sedex s;
     
     private Sedex(){
@@ -49,24 +49,6 @@ public class Sedex implements Entrega{
             return 0;
         }
         
-    }
-    
-    private double getPesoTotal(Pedido p){
-   
-        double peso = 0;
-        
-        if(p == null){
-            throw new TipoEntregaInvalido("Isso não é valido!");
-        
-        }
-            
-        for (ItemPedido item : p.getItens()) {
-            
-            peso += item.getProduto().getPeso() * item.getQuantidade();
-
-        }
-        
-        return peso/2;
     }
     
 }

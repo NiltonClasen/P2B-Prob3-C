@@ -12,7 +12,7 @@ public class Pedido {
     private Date data;
     private String endereco;
     private ArrayList<ItemPedido> itens;
-    private Entrega entrega;
+    private StrategyPedidos entrega;
 
     public Pedido() {
         
@@ -67,7 +67,7 @@ public class Pedido {
         return itens;
     }
 
-    public void setEntrega(Entrega entrega) {
+    public void setEntrega(StrategyPedidos entrega) {
         this.entrega = entrega;
     }
 

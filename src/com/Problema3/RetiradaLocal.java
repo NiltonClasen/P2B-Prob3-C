@@ -9,9 +9,8 @@ package com.Problema3;
  *
  * @author casa
  */
-public class RetiradaLocal implements Entrega{
+public class RetiradaLocal extends StrategyPedidos{
 
-    @Override
     public double getValorEntrega(Pedido p) {
         return 0;
     }

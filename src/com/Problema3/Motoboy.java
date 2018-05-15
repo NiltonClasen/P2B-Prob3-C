@@ -5,11 +5,13 @@
  */
 package com.Problema3;
 
+import com.Exceptions.TipoEntregaInvalido;
+
 /**
  *
  * @author daniel
  */
-public class Motoboy {
+public class Motoboy extends StrategyPedidos {
     
     private static Motoboy m;
 
@@ -22,6 +24,19 @@ public class Motoboy {
             m = new Motoboy();
         }
         return m;
+    }
+    
+    @Override
+    public double getValorEntrega(Pedido p) {
+
+        double peso = getPesoTotal(p);
+
+        if (peso > 25 || getQtdItens(p.getItens()) > 30) {
+            throw new TipoEntregaInvalido();
+        } 
+        
+        return 7.0;
+        
     }
     
 }
