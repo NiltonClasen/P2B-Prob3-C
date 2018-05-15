@@ -12,7 +12,18 @@ import com.Exceptions.TipoEntregaInvalido;
  * @author casa
  */
 public class Sedex implements Entrega{
+    private static Sedex s;
+    
+    private Sedex(){
+    }
 
+    public static Sedex getInstance(){
+        if(s == null){
+            s = new Sedex();
+        }
+        return s;
+    }
+    
     @Override
     public double getValorEntrega(Pedido p) {
         

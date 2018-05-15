@@ -3,6 +3,17 @@ package com.Problema3;
 import com.Exceptions.TipoEntregaInvalido;
 
 public class EncomendaPAC implements Entrega {
+    private static EncomendaPAC e;
+
+    private EncomendaPAC() {
+    }
+    
+    public static EncomendaPAC getInstance(){
+        if(e == null){
+            e = new EncomendaPAC();
+        }
+        return e;
+    }
 
     @Override
     public double getValorEntrega(Pedido p) {

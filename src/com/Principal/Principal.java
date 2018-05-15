@@ -20,7 +20,7 @@ public class Principal {
         p.setNumero(0);
         p.setNomeCliente("fulano de tal");
         p.setEndereco("alguma coisa");
-        p.setEntrega(new EncomendaPAC());
+        p.setEntrega(EncomendaPAC.getInstance());
 //        p.setData("02/02/2018");
 
         Produto pt = new Produto("produto legal", 200, 2);
