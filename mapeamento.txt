@@ -1,5 +1,10 @@
 Singleton
-� utilizado nas classes de modalidade de entrega. 
+- utilizado nas classes de modalidade de entrega. 
 
 Stategy
-Desenvolvemos uma classe abstract que coordena m�todos para as demais classes, criando uma "estrategia" (StrategyPedidos).
+Desenvolvemos uma classe abstract que coordena mŽtodos para as demais classes, criando uma "estrategia" (StrategyPedidos).
+--> Prof. Marcel: quem é ConcreteStrategy? Quem é Context?
+
+--> Prof. Marcel: os métodos getPesoTotal(Pedido p) e getQtdItens(ArrayList<ItemPedido> i) da classe StrategyPedidos estariam melhor colocados na classe Pedido, pois ambos respondem sobre características de Pedido e calculam sobre atributos de Pedido.
+
+--> Prof. Marcel: Nota 2,5
